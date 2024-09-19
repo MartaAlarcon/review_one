@@ -12,6 +12,30 @@ class Program
         Console.WriteLine("El promig de les notes es: " + Suma(nota1, nota2, nota3));
 
         Answer(Suma(nota1, nota2, nota3));
+
+        string[] ciutats = new string[100];
+        int[] codis = new int[100];
+        int i = 0;
+        string ciutat;
+        int codi;
+        do
+        {
+            Console.WriteLine("Introdueix el nom de la ciutat");
+            ciutat = Console.ReadLine();
+            if (ciutat != "")
+            {
+                ciutats[i] = ciutat;
+                Console.WriteLine("Introdueix el codi postal de la ciutat");
+                codi = Convert.ToInt32(Console.ReadLine());
+                codis[i] = codi;
+                i++;
+            }
+        } while (ciutat != "");
+        Console.WriteLine("Llistat de ciutats i codis postals");
+        for (int j = 0; j < i; j++)
+        {
+            Console.WriteLine(ciutats[j] + " - " + codis[j]);
+        }
     }
     public static void Answer(float answer)
     {
